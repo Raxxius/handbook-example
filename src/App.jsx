@@ -8,11 +8,21 @@ function App() {
   const colours = ["red", "blue", "green", "yellow", "orange"]
   const [colour, setColour] = useState(colours[0])
 
+  // State functions
+
+  const changeColour = (prevColour) => {
+    console.log(changeColour)
+  }
+
   return (
     <>
       <div>Baw Medical Example React App</div>
-      <QuoteComponent />
-      <CounterColourComponent />
+      <QuoteComponent 
+        colour={colour}
+      />
+      <CounterColourComponent 
+      
+      />
     </>
   )
 }

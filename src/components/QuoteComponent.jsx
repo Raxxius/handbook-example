@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const QuoteComponent = () => {
+const QuoteComponent = ({ colour }) => {
   // State for storing quotes and the index of the current quote to display
   const [quotes, setQuotes] = useState([]);
   const [currentQuote, setCurrentQuote] = useState(0);
+
+  console.log(colour)
 
   useEffect(() => {
     // Fetch quotes from the specified API
@@ -35,7 +37,7 @@ const QuoteComponent = () => {
   return (
     <div>
       <h2>Random Quotes</h2>
-      <p>{quotes[currentQuote]?.text}</p>
+      <p style={{color:{colour}}}>{quotes[currentQuote]?.text}</p>
       <p>- {quotes[currentQuote]?.author}</p>
       <button onClick={changeQuote}>Change Quote</button>
     </div>
