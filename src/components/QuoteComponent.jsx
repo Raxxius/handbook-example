@@ -5,8 +5,6 @@ const QuoteComponent = ({ colour }) => {
   const [quotes, setQuotes] = useState([]);
   const [currentQuote, setCurrentQuote] = useState(0);
 
-  console.log(colour)
-
   useEffect(() => {
     // Fetch quotes from the specified API
     fetch('https://type.fit/api/quotes')
