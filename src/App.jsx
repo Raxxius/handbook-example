@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import QuoteComponent from './components/QuoteComponent/QuoteComponent'
-import CounterColourComponent from './components/CounterColourComponent'
+import CounterColourComponent from './components/CounterColourComponent/CounterColourComponent'
 
 function App() {
   // State
