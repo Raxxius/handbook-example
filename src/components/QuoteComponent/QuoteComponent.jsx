@@ -6,6 +6,7 @@ const QuoteComponent = ({ colour }) => {
   const [quotes, setQuotes] = useState([]);
   const [currentQuote, setCurrentQuote] = useState(0);
 
+  // State logic
   useEffect(() => {
     // Fetch quotes from the specified API
     fetch("https://type.fit/api/quotes")
@@ -26,7 +27,7 @@ const QuoteComponent = ({ colour }) => {
       <h2>Random Quotes</h2>
       <p style={{ color: colour }}>{quotes[currentQuote]?.text}</p>
       <p>- {quotes[currentQuote]?.author}</p>
-      <button onClick={changeQuote}>Change Quote</button>
+      <button onClick={() => changeQuote(quotes, setCurrentQuote)}>Change Quote</button>
     </div>
   );
 };
