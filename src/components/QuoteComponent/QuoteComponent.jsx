@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { cleanQuotes, changeQuote } from "./functions";
 
 const QuoteComponent = ({ colour }) => {
   // State for storing quotes and the index of the current quote to display
@@ -18,26 +19,6 @@ const QuoteComponent = ({ colour }) => {
       // Catch function for Error
       .catch((error) => console.error("Error fetching quotes:", error));
   }, []);
-
-  // Function to remove "type.fit" from the author field, if present
-  const cleanQuotes = (data) => {
-    const returnValue = data.map((quote) => ({
-      text: quote.text,
-      author: cleanAuthor(quote.author) || "Unknown Author",
-    }));
-    return returnValue
-  };
-
-  // Function to clean the author field by removing "type.fit" if present
-  const cleanAuthor = (author) => {
-    return author ? author.replace(/,?\s?type\.fit$/, "").trim() : null;
-  };
-
-  // Function to change the current quote to a random one
-  const changeQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    setCurrentQuote(randomIndex);
-  };
 
   // Core return section
   return (
