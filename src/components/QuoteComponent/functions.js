@@ -14,7 +14,7 @@ const cleanAuthor = (author) => {
 };
 
 // Function to change the current quote to a random one
-export const changeQuote = () => {
+export const changeQuote = (quotes, setCurrentQuote) => {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   setCurrentQuote(randomIndex);
 };
