@@ -23,7 +23,7 @@ const QuoteComponent = ({ colour }) => {
 
   // Core return section
   return (
-    <div>
+    <div className="react-component quote-component">
       <h2>Random Quotes</h2>
       <p style={{ color: colour }}>{quotes[currentQuote]?.text}</p>
       <p>- {quotes[currentQuote]?.author}</p>
