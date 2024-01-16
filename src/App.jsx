@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className='react-example-app'>
       <div>Baw Medical Example React App</div>
       <QuoteComponent 
         colour={colour}
@@ -24,7 +24,7 @@ function App() {
       <CounterColourComponent 
         changeColour={changeColour}
       />
-    </>
+    </div>
   )
 }
 
