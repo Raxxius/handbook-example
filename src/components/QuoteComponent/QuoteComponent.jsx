@@ -13,7 +13,7 @@ const QuoteComponent = ({ colour }) => {
       .then((response) => response.json())
       .then((data) => {
         // Remove "type.fit" from the author field, if present
-        const cleanedQuotes = cleanQuotes(data)
+        const cleanedQuotes = cleanQuotes(data);
         // Set State logic
         setQuotes(cleanedQuotes);
       })
@@ -25,9 +25,15 @@ const QuoteComponent = ({ colour }) => {
   return (
     <div className="react-component quote-component primary">
       <h2>Random Quotes</h2>
-      <p style={{ color: colour }} className="quote-box">{quotes[currentQuote]?.text}</p>
+      <div className="quote-box">
+        <p style={{ color: colour }}>
+          {quotes[currentQuote]?.text}
+        </p>
+      </div>
       <p>- {quotes[currentQuote]?.author}</p>
-      <button onClick={() => changeQuote(quotes, setCurrentQuote)}>Change Quote</button>
+      <button onClick={() => changeQuote(quotes, setCurrentQuote)}>
+        Change Quote
+      </button>
     </div>
   );
 };
