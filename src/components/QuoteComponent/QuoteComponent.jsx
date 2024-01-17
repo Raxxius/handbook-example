@@ -23,9 +23,9 @@ const QuoteComponent = ({ colour }) => {
 
   // Core return section
   return (
-    <div className="react-component quote-component">
+    <div className="react-component quote-component primary">
       <h2>Random Quotes</h2>
-      <p style={{ color: colour }}>{quotes[currentQuote]?.text}</p>
+      <p style={{ color: colour }} className="quote-box">{quotes[currentQuote]?.text}</p>
       <p>- {quotes[currentQuote]?.author}</p>
       <button onClick={() => changeQuote(quotes, setCurrentQuote)}>Change Quote</button>
     </div>

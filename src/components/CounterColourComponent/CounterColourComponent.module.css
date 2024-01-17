@@ -1,5 +1,29 @@
-.react-component {
+.reactComponent {
     display: flex;
     align-items: center;
-    background-color: aqua;
+    justify-content: space-around;
 }
+
+.colourBox {
+    padding: 15px;
+    border-radius: 5px;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colourBox button {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 15px;
+}
+
+.countBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

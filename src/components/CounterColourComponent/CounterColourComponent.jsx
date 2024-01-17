@@ -2,15 +2,17 @@ import { useState } from "react";
 import { incrementCount, decrementCount } from "./functions";
 import ColourSubComponent from "./ColorSubComponent";
 import CounterSubComponent from "./CounterSubComponent";
+import styles from "./CounterColourComponent.module.css";
 
-const CounterColorComponent = ({ changeColour }) => {
+const CounterColourComponent = ({ changeColour }) => {
   /* useState */
   const [count, setCount] = useState(0);
 
   return (
-    <div className="react-component counter-colour-component">
-      <ColourSubComponent changeColour={changeColour} />
+    <div className={`${styles.reactComponent} react-component primary`}>
+      <ColourSubComponent changeColour={changeColour} styles={styles} />
       <CounterSubComponent
+        styles={styles}
         count={count}
         setCount={setCount}
         incrementCount={incrementCount}
@@ -20,4 +22,4 @@ const CounterColorComponent = ({ changeColour }) => {
   );
 };
 
-export default CounterColorComponent;
+export default CounterColourComponent;

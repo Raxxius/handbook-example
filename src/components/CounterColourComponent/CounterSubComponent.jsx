@@ -1,14 +1,27 @@
 const CounterSubComponent = ({
+  styles,
   count,
   setCount,
   incrementCount,
   decrementCount,
 }) => (
-  <div className="count-box">
+  <div className={`${styles.countBox} secondary}`}>
     <h2>Counter</h2>
     <p>Count: {count}</p>
-    <button onClick={() => incrementCount(setCount)}>Increment</button>
-    <button onClick={() => decrementCount(setCount)}>Decrement</button>
+    <div>
+      <button
+        className="call-to-action"
+        onClick={() => incrementCount(setCount)}
+      >
+        Increment
+      </button>
+      <button
+        className="call-to-action"
+        onClick={() => decrementCount(setCount)}
+      >
+        Decrement
+      </button>
+    </div>
   </div>
 );
 
